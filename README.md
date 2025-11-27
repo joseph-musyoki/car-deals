@@ -112,7 +112,7 @@ npm install
 npm start
 
 
-React runs on http://localhost:3000
+React runs on http://localhost:5173
 
 Backend runs on http://localhost:5000
 
