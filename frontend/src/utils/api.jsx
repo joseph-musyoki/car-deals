@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://car-deals-u4yz.onrender.com';
+const API_URL = import.meta.env.VITE_API_URL || 'https://localhost:5000';
 
 const api = axios.create({
   baseURL: API_URL,
