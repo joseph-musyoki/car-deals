@@ -17,14 +17,21 @@ dotenv.config()
 const app = express();
 
 const allowedOrigins = [
-  "http://localhost:5173", 
+  "http://localhost:5173",
   "https://car-deals-1-2gdv.onrender.com"
 ];
 
 app.use(cors({
-  origin: allowedOrigins,
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
+
 
 
 app.use(express.json());
