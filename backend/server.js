@@ -17,7 +17,10 @@ dotenv.config()
 const app = express();
 
 app.use(cors({
-  origin: "https://frontend-car-deals.onrender.com",
+  origin:  [
+  "http://localhost:5173",
+  "https://frontend-car-deals.onrender.com",
+],
   credentials: true
 }));
 
